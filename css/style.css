@@ -1,0 +1,212 @@
+
+/*******Style CSS Drives All Custom CSS for AUTISMUS WELT************/
+
+/***********Header Section Custom CSS************/
+
+.headerimage {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/**********TOP NAVBAR SECTION STYLING for NAV.php**********/
+
+.dropdown-toggle::after {
+    color: white;
+}
+
+.min-width-logo {
+    min-width: 100px;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+.ml-minus-custom {
+    margin-right: -3em!important;
+}
+nav li ~a:hover { 
+    cursor: pointer;
+    text-color: black;
+}
+
+
+svg:hover path {
+    fill: rgba(248, 248, 248, 1.0);
+    text-color: black;
+}
+
+
+
+.bg-ueber-uns {
+  background-color: #CF75EF;
+}
+.bg-ueber-uns a {
+color: #fff;
+}
+.bg-autismus {
+  background-color: #FF6B7C;
+}
+.bg-autismus a {
+color: #fff;
+}
+.bg-recht {
+  background-color: #FF9F48;
+}
+.bg-recht a {
+color: #fff;
+}
+.bg-wohin-wenden {
+  background-color: #F7EE64;
+}
+.bg-wohin-wenden a {
+  color: #9b9b9b;
+}
+.bg-erfahrungen {
+  background-color: #50B0ED;
+}
+.bg-erfahrungen a {
+color: #fff;
+}
+.bg-tipps-und-tricks {
+  background-color: #2ABBA8;
+}
+.bg-tipps-und-tricks  a {
+color: #fff;
+}
+.bg-aktuelles {
+  background-color: #F38ABE;
+}
+.bg-aktuelles a {
+color: #fff;
+}
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+.bg-custom {
+    background-color: #FF9933;
+    background: linear-gradient(45deg, #FF9933 0%, #53AEED 100%);
+    background: -moz-linear-gradient(45deg, #FF9933 0%, #53AEED 36a4 100%);
+    background: -webkit-linear-gradient(45deg, #FF9933 0%, #53AEED 100%);
+}
+
+#login {
+    margin: auto -2px auto auto;
+}
+
+/* #menuname {
+    color: white;
+} */
+
+/* changes the search and admin button to a smaller size */
+.xs {
+    padding: .25rem .4rem;
+    font-size: .875rem;
+    line-height: .5;
+    border-radius: .2rem;
+}
+
+
+/***********ADMIN EDIT PAGE CSS STYLING***********/
+
+#editbtn {
+    background-color: #FFB266;
+}
+
+.textareabucket {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+}
+
+#editcontentsection {
+    background-color: lightgrey;
+}
+
+.menudirection {
+    font-size: 1.25em;
+}
+
+.btn-warning {
+    background-color: #FFB266 !important;
+}
+
+
+/*********FOOTER SECTION CSS STYLING***************/
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+footer {
+    background-color: #FF9933;
+    background: linear-gradient(-45deg, #FF9933 0%, #FFB266 100%);
+    background: -moz-linear-gradient(-45deg, #FF9933 0%, #FFB266 36a4 100%);
+    background: -webkit-linear-gradient(-45deg, #FF9933 0%, #FFB266 100%);
+}
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+/**//**//**//**//**//**//**//**//**//**//**//**//**/
+footer a{
+	text-decoration: none;
+	color: #F8F9FA;
+}
+footer ~a:hover { 
+    cursor: pointer;
+}
+.footer-social-link a {
+    font-size: 2em;
+}
+.short-about {
+    line-height: 2em;
+}
+.footer-nav {
+    font-size: 1em!important;
+}
+footer ul {
+    list-style: none;
+    line-height: 2em;
+}
+p.contact-info {
+    position: relative;
+    padding-left: 50px;
+}
+p.contact-info i.fa {
+    position: absolute;
+    left: 0;
+    font-size: 1em;
+    top: 5px;
+}
+.footer-subscription-form h4 {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+input[type=submit] {
+    background: #FF737D  ;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    p.contact-info {
+    padding-left: 0;
+    }
+    p.contact-info i.fa {
+    position: initial;
+    padding-right: 1em;
+    }
+}
+
+
+/***********MEDIA QUERIES FOR WIDTH AND HEIGTHS A LA BOOTSTRAP***********/
+/***********other breakpoints: sm-576, md-768, lg-992, xl-1200;**/
+
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768) {
+  .w-md-75 {
+    max-width: 75% !important;
+  }
+}
