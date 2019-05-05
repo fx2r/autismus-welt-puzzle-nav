@@ -1,4 +1,3 @@
-
 <!-- header included -->
 <!-- nav included  -->
 <?php
@@ -25,11 +24,11 @@ require_once 'actions/show.php'
 	</div>
 <!-- admin button done
  -->
-	<div class="row">
-		<aside class="col-lg-2 d-none d-lg-block mt-4">
+	<div class="d-flex flex-row">
+		<aside class="d-none col-lg-2 d-lg-flex mt-2 mt-md-5">
 			<?php require_once 'sidebars/home.php'; ?>
 		</aside>
-		<div id="welcome" class="col-lg-10 mt-4">
+		<div class="col-lg-10 mt-2 mt-md-5">
 			<?php echo $data['Content'] ?>
 		</div>
 	</div>

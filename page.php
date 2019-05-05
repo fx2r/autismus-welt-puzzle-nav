@@ -6,16 +6,16 @@ include ("header.php");
 // 	echo 'logged in';
 // }
 ?>
-<main id="about">
+<main>
 	<!-- 	admin button -->
 	<?php if (isset($_SESSION['user'])){
  		?>
-       <a  id="login"  href="adminIndex.php"><button class="btn btn-sm-default" type="button">Zurück zum Admin</button></a>
+       <a id="login"  href="adminIndex.php"><button class="btn btn-sm-default" type="button">Zurück zum Admin</button></a>
     <?php }else { ?>
     <!-- <a  id="login" class="nav-link" href="login.php"><button type="submit" name="btn-login"><i class="fas fa-user-lock"></i></button></a> -->
  	<?php } ?>
-	<div class="row">
-		<aside class="col-lg-2 d-none d-lg-block mt-4 pr-0">
+	<div class="d-flex flex-row">
+		<aside class="d-none col-lg-2 d-lg-flex mt-2 mt-lg-5">
 			<?php
 			if ($contentid >= 2 && $contentid <=5) { //Über uns
 				require_once 'sidebars/ueberuns.php';
@@ -34,7 +34,7 @@ include ("header.php");
 			}
 			?>
 		</aside>
-		<div class="col-12 col-lg-10 mt-4">
+		<div class="col-12 col-lg-10 mt-2 mt-lg-5">
 			<?php			
 				echo $data['Content'];
 			?>

@@ -1,4 +1,4 @@
-<div class="bg-autismus w-100 list-group list-group-flush">
+<div class="bg-autismus list-group list-group-flush w-100 mb-3 border-radius">
     <a href="page.php?contentid=6" class="list-group-item list-group-item-action bg-autismus">Was ist ASS</a>
     <a href="page.php?contentid=7" class="list-group-item list-group-item-action bg-autismus">Ausprägung</a>
     <a href="page.php?contentid=8" class="list-group-item list-group-item-action bg-autismus">Diagnose</a>

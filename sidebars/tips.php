@@ -1,4 +1,4 @@
-<div class="bg-tipps-und-tricks w-100 list-group list-group-flush">
+<div class="bg-tipps-und-tricks list-group list-group-flush w-100 mb-3 border-radius">
     <a href="page.php?contentid=25" class="list-group-item list-group-item-action bg-tipps-und-tricks">Schule</a>
     <a href="page.php?contentid=25" class="list-group-item list-group-item-action bg-tipps-und-tricks">Finanzielle Unterstützung</a>
     <a href="page.php?contentid=26" class="list-group-item list-group-item-action bg-tipps-und-tricks">Fachliteratur</a>

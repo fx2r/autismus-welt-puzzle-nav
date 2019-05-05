@@ -1,61 +1,104 @@
-
 /*******Style CSS Drives All Custom CSS for AUTISMUS WELT************/
 
-/***********Header Section Custom CSS************/
-
-.headerimage {
-  display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+/**********HEADER**********/
+header {
+  padding-top: 1em;
+  padding-bottom: 1em ;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  background-color: #50B0ED;
 }
 
 /**********TOP NAVBAR SECTION STYLING for NAV.php**********/
-
-.dropdown-toggle::after {
-    color: white;
-}
-
 .min-width-logo {
-    min-width: 100px;
+  min-width: 120px;
 }
-
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
-.ml-minus-custom {
-    margin-right: -3em!important;
+/* bring puzzle pieces closer together */
+nav svg {
+  margin-right: -30%;
+}
+/* counter act the negative margin that brings the puzzle pieces togeter */
+nav ul {
+  width: 96% !important;
 }
 nav li ~a:hover { 
-    cursor: pointer;
-    text-color: black;
+  cursor: pointer;
 }
+/*START enlarge nav link when hovering over it*/
+/*NOT WORKING IN FIREFOX*/
+nav svg {
+  display: inline-block;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.25s ease-in;
+  -moz-transition: transform 0.25s ease-in;
+  -o-transition: transform 0.25s ease-in;
+  transition: transform 0.25s ease-in;
+}
+nav svg:hover {
+  -webkit-transform: scale(1.02,1.02);
+  -moz-transform: scale(1.02,1.02);
+  -ms-transform: scale(1.02,1.02);
+  -o-transform: scale(1.02,1.02);
+  transform: scale(1.02,1.02);
+}
+/*END enlarge nav link when hovering over it*/
 
+/*START minimise navebar on scroll with adding/removing .scrolled via JQuery*/
+@media (min-width: 768px) {
+  .scrolled {
+   transition: 0.6s ease!important;
+  }
+  .scrolled nav {
+    padding-top: 0!important
+    padding-bottom: 0!important;
+    transition: 0.6s ease;
+  }
+  .scrolled.navbar img {
+    max-width: 120px;
+    margin-top: -33%;
+    transition: 0.6s ease
+  }
+  .scrolled.navbar .nav-link {
+    max-height: 50px;
+    overflow: hidden;
+    transition: 0.6s ease;
+  }
+  .scrolled.navbar svg {
+    margin-top: -99.99%;
+    transition: 0.6s ease;
+  }
+}
+/*END minimise navebar on scroll*/
 
+/*START make text on hover visible*/
 svg:hover path {
-    fill: rgba(248, 248, 248, 1.0);
-    text-color: black;
+  fill: rgba(248, 248, 248, 1.0);
 }
+svg:hover text {
+  fill: #343a40;}
+/*END make text on hover visible*/
 
-
-
+/*START background SVG */
 .bg-ueber-uns {
   background-color: #CF75EF;
 }
 .bg-ueber-uns a {
-color: #fff;
+  color: #fff;
 }
 .bg-autismus {
   background-color: #FF6B7C;
 }
 .bg-autismus a {
-color: #fff;
+  color: #fff;
 }
 .bg-recht {
   background-color: #FF9F48;
 }
 .bg-recht a {
-color: #fff;
+  color: #fff;
 }
 .bg-wohin-wenden {
   background-color: #F7EE64;
@@ -67,32 +110,41 @@ color: #fff;
   background-color: #50B0ED;
 }
 .bg-erfahrungen a {
-color: #fff;
+  color: #fff;
 }
 .bg-tipps-und-tricks {
   background-color: #2ABBA8;
 }
 .bg-tipps-und-tricks  a {
-color: #fff;
+  color: #fff;
 }
 .bg-aktuelles {
   background-color: #F38ABE;
 }
 .bg-aktuelles a {
-color: #fff;
+  color: #fff;
 }
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
+/*END background SVG */
 
+/*****************SIDEBARS********************/
+/*sidebar radius*/
+.border-radius {
+  border-radius: 0.25rem!important;
+}
+div.list-group-flush a:first-child {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+div.list-group-flush a:last-child {
+  border-bottom: 1px solid rgba(0,0,0,.125)!important;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+/*background for header and footer*/
 .bg-custom {
-    background-color: #FF9933;
-    background: linear-gradient(45deg, #FF9933 0%, #53AEED 100%);
-    background: -moz-linear-gradient(45deg, #FF9933 0%, #53AEED 36a4 100%);
-    background: -webkit-linear-gradient(45deg, #FF9933 0%, #53AEED 100%);
-}
-
-#login {
-    margin: auto -2px auto auto;
+    background-color: #50B0ED;
+    /* background: linear-gradient(45deg, #50B0ED 0%, #3982C1 100%);
+    background: -moz-linear-gradient(45deg, #50B0ED 0%, #3982C1 36a4 100%);
+    background: -webkit-linear-gradient(45deg, #50B0ED 0%, #3982C1 100%); */
 }
 
 /* #menuname {
@@ -101,112 +153,73 @@ color: #fff;
 
 /* changes the search and admin button to a smaller size */
 .xs {
-    padding: .25rem .4rem;
-    font-size: .875rem;
-    line-height: .5;
-    border-radius: .2rem;
+  padding: .25rem .4rem;
+  font-size: .875rem;
+  line-height: .5;
+  border-radius: .2rem;
 }
-
 
 /***********ADMIN EDIT PAGE CSS STYLING***********/
-
 #editbtn {
-    background-color: #FFB266;
+  background-color: #FFB266;
 }
-
 .textareabucket {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 100px;
 }
-
 #editcontentsection {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
-
 .menudirection {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
-
 .btn-warning {
-    background-color: #FFB266 !important;
+  background-color: #FFB266 !important;
 }
-
 
 /*********FOOTER SECTION CSS STYLING***************/
-
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
 footer {
-    background-color: #FF9933;
-    background: linear-gradient(-45deg, #FF9933 0%, #FFB266 100%);
-    background: -moz-linear-gradient(-45deg, #FF9933 0%, #FFB266 36a4 100%);
-    background: -webkit-linear-gradient(-45deg, #FF9933 0%, #FFB266 100%);
+  line-height: 2em;
+/*   background-color: #53AEED; */
 }
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**//**//**//**//**//**/
 footer a{
-	text-decoration: none;
-	color: #F8F9FA;
+  text-decoration: none;
+  color: #F8F9FA;
+}
+a[type=submit]{
+  -webkit-appearance: none!important;
 }
 footer ~a:hover { 
     cursor: pointer;
 }
-.footer-social-link a {
-    font-size: 2em;
-}
-.short-about {
-    line-height: 2em;
-}
 .footer-nav {
-    font-size: 1em!important;
+  font-size: 1em!important;
 }
 footer ul {
-    list-style: none;
-    line-height: 2em;
+  list-style: none;
+  padding-right: 20px;
 }
-p.contact-info {
-    position: relative;
-    padding-left: 50px;
-}
-p.contact-info i.fa {
-    position: absolute;
-    left: 0;
-    font-size: 1em;
-    top: 5px;
-}
-.footer-subscription-form h4 {
-    text-transform: uppercase;
-    font-size: 1em;
-}
-input[type=submit] {
-    background: #FF737D  ;
-    text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-    p.contact-info {
-    padding-left: 0;
-    }
-    p.contact-info i.fa {
-    position: initial;
-    padding-right: 1em;
-    }
-}
-
 
 /***********MEDIA QUERIES FOR WIDTH AND HEIGTHS A LA BOOTSTRAP***********/
 /***********other breakpoints: sm-576, md-768, lg-992, xl-1200;**/
 
 @media (min-width: 992px) {
   .w-lg-100 {
-    width: 100% !important;
+    min-width: 100% !important;
   }
-}
-
-@media (min-width: 768) {
-  .w-md-75 {
+  .mw-lg-75 {
     max-width: 75% !important;
   }
+  .h-lg-auto {
+    height: auto!important;
+  }
 }
+@media (min-width: 768px) {
+
+  .h-md-100 {
+    height: 100%;
+  }
+}
+ 
