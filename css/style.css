@@ -1,4 +1,9 @@
 /*******Style CSS Drives All Custom CSS for AUTISMUS WELT************/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 /**********HEADER**********/
 header {
@@ -177,6 +182,12 @@ div.list-group-flush a:last-child {
 }
 .btn-warning {
   background-color: #FFB266 !important;
+}
+
+/*********MAIN SECTION CSS STYLING***************/
+/*push footer to bottom of page even if little content*/
+main {
+  flex-grow: 1;
 }
 
 /*********FOOTER SECTION CSS STYLING***************/
